@@ -831,6 +831,10 @@ body.show-start .scroll-hint {
   .category-select {
     display: block;
     margin-bottom: 14px;
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .category-bar {
     display: none;
@@ -845,6 +849,9 @@ body.show-start .scroll-hint {
     align-items: center;
     gap: 12px;
     width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .nav-column {
     flex-direction: row;
@@ -874,7 +881,7 @@ body.show-start .scroll-hint {
   }
   .gallery-frame {
     width: 100%;
-    max-width: 520px;
+    max-width: none;
     height: auto;
     min-height: 0;
     padding: 0;
@@ -882,7 +889,7 @@ body.show-start .scroll-hint {
   }
   .work-card {
     width: 100%;
-    max-width: 520px;
+    max-width: none;
     height: auto;
     grid-template-columns: 1fr;
     padding: 16px 16px 14px;
