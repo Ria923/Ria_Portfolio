@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Monhoru",
       category: "webapp",
       year: "2025",
-      desc: "ドラッグ&ドロップ可能なタスク管理。ライト/ダークテーマ切替。",
+      desc: "",
       image: 'url("./images/monhoru-01.png")',
       gallery: [
         'url("./images/monhoru-01.png")',

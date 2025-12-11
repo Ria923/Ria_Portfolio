@@ -750,12 +750,62 @@ body.show-start .scroll-hint {
 }
 
 @media (max-width: 640px) {
+  body {
+    scroll-snap-type: y proximity;
+  }
+  .logo-section {
+    height: 150vh;
+    min-height: 140vh;
+  }
+  .logo-holder {
+    padding: 12px;
+    height: 92vh;
+  }
+  .logo-svg {
+    width: 88vw;
+    max-width: none;
+  }
+  .scroll-hint {
+    font-size: 22px;
+    bottom: 14px;
+  }
+  .about_site,
+  .about_me {
+    padding: 46px 18px;
+  }
+  .about_site h1,
+  .about_me h1,
+  .portfolio h1 {
+    font-size: 26px;
+  }
+  .about_site p,
+  .about_me p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .portfolio {
+    padding: 60px 18px 70px;
+  }
+  .portfolio-tip {
+    font-size: 13px;
+    margin-bottom: 22px;
+  }
   .category-bar {
     grid-template-columns: repeat(2, minmax(120px, 1fr));
+    column-gap: 16px;
+    row-gap: 12px;
+  }
+  .category-btn {
+    width: 100%;
+    min-width: 0;
   }
   .gallery {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr;
     gap: 12px;
+  }
+  .nav-column {
+    flex-direction: row;
+    gap: 10px;
   }
   .nav-arrow {
     width: 44px;
@@ -763,7 +813,13 @@ body.show-start .scroll-hint {
     font-size: 24px;
   }
   .gallery-frame {
-    height: 360px;
+    height: 340px;
+  }
+  .work-card {
+    width: calc(100% - 40px);
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 18px;
   }
 }
 
