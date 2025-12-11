@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const categoryButtons = Array.from(
     document.querySelectorAll(".category-btn")
   );
+  const categorySelect = document.querySelector(".category-select select");
   const gallerySlide = document.querySelector(".gallery-slide");
   const workTitle = document.querySelector(".work-title");
   const workMeta = document.querySelector(".work-meta");
@@ -295,6 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
     categoryButtons.forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.category === cat);
     });
+    if (categorySelect && categorySelect.value !== cat) {
+      categorySelect.value = cat;
+    }
     syncCard();
   }
 
@@ -333,6 +337,12 @@ document.addEventListener("DOMContentLoaded", () => {
         setCategory(btn.dataset.category || "all")
       )
     );
+    if (categorySelect) {
+      categorySelect.addEventListener("change", (e) => {
+        const value = e.target.value || "all";
+        setCategory(value);
+      });
+    }
     if (prevBtn) prevBtn.addEventListener("click", prev);
     if (nextBtn) nextBtn.addEventListener("click", next);
     workOpen.addEventListener("click", openModal);
