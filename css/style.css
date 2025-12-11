@@ -616,8 +616,12 @@ body.show-start .scroll-hint {
   background: #d6d6d6;
   border-radius: 24px;
   padding: 0;
-  width: min(1180px, 96vw);
-  height: 90vh;
+  width: min(1080px, 90vw);
+  max-width: 1180px;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  max-height: min(760px, 88vh);
+  min-height: 540px;
   box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
@@ -760,5 +764,20 @@ body.show-start .scroll-hint {
   }
   .gallery-frame {
     height: 360px;
+  }
+}
+
+@media (max-width: 720px) {
+  .modal-content {
+    width: 94vw;
+    aspect-ratio: auto;
+    min-height: auto;
+    max-height: 88vh;
+  }
+  .modal-body {
+    flex-direction: column;
+  }
+  .modal-image {
+    aspect-ratio: 4 / 3;
   }
 }
